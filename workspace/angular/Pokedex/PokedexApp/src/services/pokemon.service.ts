@@ -7,7 +7,8 @@ import {from, map, mergeMap } from 'rxjs';
   providedIn: 'root'
 })
 export class PokemonService {
-  public pokemons: Pokemon[] = []
+  public pokemons: Pokemon[] = [];
+  public filteredPokemons: Pokemon[] = [];  
   constructor( private httpClient: HttpClient,) {
     const pokemonApiUrl: string = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
     this.httpClient.get<any>(pokemonApiUrl).pipe(

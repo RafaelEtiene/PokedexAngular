@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { PokemonService } from 'src/services/pokemon.service';
 
 @Component({
@@ -7,5 +7,6 @@ import { PokemonService } from 'src/services/pokemon.service';
   styleUrls: ['./pokemon-list.component.sass']
 })
 export class PokemonListComponent {
-  constructor(public pokemonService: PokemonService){}
+  constructor(public pokemonService: PokemonService){
+  }
 }
